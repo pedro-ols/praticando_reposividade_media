@@ -45,3 +45,53 @@
     align-items: center;
 }
 
+
+/*Para smartphones*/
+@media (max-width: 767px){
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    .main-container{
+        display: flex;
+        flex-flow: column;
+    }
+    .center-container, .right-container, .left-container{
+        width: 100%;    
+    }
+    .header-container, .footer-container{
+        height: 12rem;
+    }
+    .left-container{
+        order: 2;
+    }
+    .center-container{
+        order: 1;
+    }
+    .right-container{
+        order: 3;
+    }
+}
+
+/*Para tablets*/
+@media (min-width: 768px) and (max-width: 1024px){
+    .main-container{
+        display: flex;
+        flex-flow: row wrap;
+    }     
+    .left-container{
+        order: 2;
+        height: 20rem;
+        width: 50%;
+    }
+    .center-container{
+        order: 1;
+        width: 100%;
+        height: 27.5rem;
+    }
+    .right-container{
+        order: 3;
+        height: 20rem;
+        width: 50%;
+    }
+}
